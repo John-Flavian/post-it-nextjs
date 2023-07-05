@@ -7,7 +7,7 @@ import Logged from "./Logged";
 export default async function Nav() {
   // eslint-disable-next-line
   const session = await getServerSession(authOptions);
-  console.log(session);
+
   return (
     <nav className="flex justify-between items-center py-8">
       <Link href={"/"}>
