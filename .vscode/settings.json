@@ -13,5 +13,8 @@
   "files.autoSave": "onFocusChange",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   } // optional but recommended
 }
