@@ -19,7 +19,7 @@ model User {
   accounts      Account[]
   sessions      Session[]
   Post          Post[]
-  Comment       Comment[]
+  comment       Comment[]
 }
 
 model Post {
@@ -30,7 +30,7 @@ model Post {
   published Boolean   @default(false)
   userId    String
   user      User      @relation(fields: [userId], references: [id])
-  Comment   Comment[]
+  comment   Comment[]
 }
 
 model Comment {
@@ -39,7 +39,7 @@ model Comment {
   postId    String
   userId    String
   createdAt DateTime @default(now())
-  post      Post     @relation(fields: [postId], references: [id])
+  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
   user      User     @relation(fields: [userId], references: [id])
 }
 
