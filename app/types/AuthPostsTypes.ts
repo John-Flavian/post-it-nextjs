@@ -1,15 +1,19 @@
 export type AuthPostsType = {
-  title: string;
+  image: string;
+  email: string;
+  name: string;
   id: string;
-  createdAt: string;
-  user: {
-    name: string;
-    image: string;
-  };
-  comment?: {
+  avatar: string;
+  Post: {
     createdAt: string;
     id: string;
-    postId: string;
-    userId: string;
+    title: string;
+    comment?: {
+      createdAt: string;
+      id: string;
+      postId: string;
+      title: string;
+      userId: string;
+    }[];
   }[];
 };
