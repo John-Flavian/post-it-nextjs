@@ -18,7 +18,10 @@ export default function Toggle({ deletePost, setToggle }: ToggleProps) {
         <h3 className="text-red-600 text-sm">
           Pressing the delete button will permantly delete your post
         </h3>
-        <button className="bg-red-600 text-sm text-white py-2 px-4 rounded-md">
+        <button
+          onClick={deletePost}
+          className="bg-red-600 text-sm text-white py-2 px-4 rounded-md"
+        >
           Delete
         </button>
       </div>
