@@ -7,7 +7,7 @@ import { PostType } from "./types/postType";
 
 //Fetch all posts
 const allPosts = async () => {
-  const response = await axios.get("/api/getPosts");
+  const response = await axios.get("/api/posts/getPosts");
   return response.data;
 };
 

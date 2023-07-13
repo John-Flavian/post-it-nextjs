@@ -6,7 +6,7 @@ import { AuthPostsType } from "../types/AuthPostsTypes";
 import EditPost from "./EditPosts";
 
 const fetchAuthPosts = async () => {
-  const response = await axios.get("/api/authPost");
+  const response = await axios.get("/api/posts/authPost");
   return response.data;
 };
 

@@ -14,7 +14,7 @@ export default function CreatePost() {
 
   // Create a Post
   const { mutate } = useMutation(
-    async (title: string) => await axios.post("/api/posts", { title }),
+    async (title: string) => await axios.post("/api/posts/posts", { title }),
     {
       onError: (error) => {
         if (error instanceof AxiosError) {
