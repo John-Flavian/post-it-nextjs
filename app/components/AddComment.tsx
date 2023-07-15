@@ -50,7 +50,7 @@ export default function AddComment({ id }: PostProps) {
   };
 
   return (
-    <form className="my-8">
+    <form onSubmit={submitComment} className="my-8">
       <h3>Add a comment</h3>
       <div className="flex flex-col my-2">
         <input
@@ -64,7 +64,7 @@ export default function AddComment({ id }: PostProps) {
       <div className="flex items-center gap-2">
         <button
           disabled={isDisabled}
-          className="text-sm bg-teal-600 text-white py-6"
+          className="text-sm bg-teal-600 text-white py-2 px-6 rounded-xl disabled:opacity-25"
           type="submit"
         >
           Add Comment
