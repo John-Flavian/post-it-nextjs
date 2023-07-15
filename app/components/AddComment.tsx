@@ -30,6 +30,7 @@ export default function AddComment({ id }: PostProps) {
         toast.success("Added your comment successfully", {
           id: commentToastId,
         });
+        queryClient.invalidateQueries(["detail-post"]);
       },
       onError: (error) => {
         setIsDisabled(false);
