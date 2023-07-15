@@ -21,4 +21,4 @@ export type PostType = {
       name: string;
     };
   }[];
-};
+}[];
