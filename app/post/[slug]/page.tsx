@@ -19,12 +19,10 @@ const fetchDetails = async (slug: string) => {
 };
 
 export default function PostDetail(url: URL) {
-  const { data, isLoading } = useQuery<PostType[]>({
+  const { data, isLoading } = useQuery<PostType>({
     queryKey: ["detail-post"],
     queryFn: () => fetchDetails(url.params.slug),
   });
-
-  console.log(data);
 
   if (isLoading) return "Loading...";
 
