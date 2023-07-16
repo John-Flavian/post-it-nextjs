@@ -29,8 +29,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "pages/api/posts/posts.js",
-    "app/auth/Nav.jsx",
-, "app/post/[slug]/page.jsx"    "app/dashboard/page.jsx"
+    "app/auth/Nav.jsx"
   ],
   "exclude": ["node_modules"]
 }
