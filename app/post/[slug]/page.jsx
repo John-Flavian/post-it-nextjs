@@ -2,27 +2,23 @@
 
 import AddComment from "@/app/components/AddComment";
 import Post from "@/app/components/Posts";
-import { PostType } from "@/app/types/Post";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Image from "next/image";
 
-type URL = {
-  params: {
-    slug: string;
-  };
-};
-
-const fetchDetails = async (slug: string) => {
+const fetchDetails = async (slug) => {
   const response = await axios.get(`/api/posts/${slug}`);
   return response.data;
 };
 
-export default function PostDetail(url: URL) {
-  const { data, isLoading } = useQuery<PostType>({
-    queryKey: ["detail-post"],
-    queryFn: () => fetchDetails(url.params.slug),
-  });
+export default function PostDetail(url) {
+  const { data, isLoading } =
+    useQuery <
+    PostType >
+    {
+      queryKey: ["detail-post"],
+      queryFn: () => fetchDetails(url.params.slug),
+    };
 
   if (isLoading) return "Loading...";
 
