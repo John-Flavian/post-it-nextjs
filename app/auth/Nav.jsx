@@ -5,7 +5,6 @@ import { getServerSession } from "next-auth/next";
 import Logged from "./Logged";
 
 export default async function Nav() {
-  // eslint-disable-next-line
   const session = await getServerSession(authOptions);
 
   return (
