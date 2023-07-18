@@ -31,5 +31,6 @@
     "pages/api/posts/posts.js",
     "app/auth/Nav.jsx"
   ],
+
   "exclude": ["node_modules"]
 }
